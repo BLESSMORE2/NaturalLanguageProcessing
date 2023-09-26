@@ -13,18 +13,7 @@ tokenizer = pickle.load(open('tokenizerr.pkl', 'rb'))
 
 
 def predict_next_words(model, tokenizer, text, num_words=1):
-    """
-    Predict the next set of words using the trained model.
-
-    Args:
-    - model (keras.Model): The trained model.
-    - tokenizer (Tokenizer): The tokenizer object used for preprocessing.
-    - text (str): The input text.
-    - num_words (int): The number of words to predict.
-
-    Returns:
-    - str: The predicted words.
-    """
+    
     for _ in range(num_words):
         # Tokenize and pad the text
         sequence = tokenizer.texts_to_sequences([text])[0]
